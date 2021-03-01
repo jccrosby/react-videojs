@@ -7,3 +7,5 @@ Shows, media swapping, seeking, and rate control.
 
 1. `yarn`
 2. `yarn start`
+
+![Video.js Example App](https://github.mlbam.net/storage/user/206/files/3ee5b000-7a73-11eb-8822-860aca3217b0)
