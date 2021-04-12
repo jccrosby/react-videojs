@@ -9,14 +9,6 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps {
-                echo 'testing...'
-                nodejs('nodejs@12.22.1') {
-                    sh 'yarn install'
-                }
-            }
-        }
         stage('Build') {
             steps {
                 echo 'building...'
