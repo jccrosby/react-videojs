@@ -25,6 +25,7 @@
     "styled-components": "^5"
   },
   "scripts": {
+    "build": "webpack --mode production",
     "dev": "webpack --mode development",
     "start": "webpack serve"
   }
