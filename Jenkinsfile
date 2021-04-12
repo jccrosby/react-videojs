@@ -4,13 +4,17 @@ pipeline {
         stage('Install') {
             steps {
                 echo 'installing...'
-                sh 'npm install'
+                nodejs('nodejs@12.22.1') {
+                    sh 'yarn install'
+                }
             }
         }
         stage('Build') {
             steps {
                 echo 'building...'
-                sh 'npm run build'
+                nodejs('nodejs@12.22.1') {
+                    sh 'yarn build'
+                }
             }
         }
     }
