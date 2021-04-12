@@ -3,6 +3,7 @@ grunt/
 bower_components/
 node_modules
 dist/
+build/
 yarn-error.log
 npm-debug.log
 coverage*
