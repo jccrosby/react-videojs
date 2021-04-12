@@ -1,14 +1,27 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:12'
-            args '-p 3000:3000'
-        }
-    }
     stages {
+        stage('Install') {
+            steps {
+                echo 'installing...'
+                nodejs('nodejs@12.22.1') {
+                    sh 'yarn install'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'testing...'
+                nodejs('nodejs@12.22.1') {
+                    sh 'yarn install'
+                }
+            }
+        }
         stage('Build') {
             steps {
-                sh 'yarn install'
+                echo 'building...'
+                nodejs('nodejs@12.22.1') {
+                    sh 'yarn build'
+                }
             }
         }
     }
